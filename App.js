@@ -1,16 +1,23 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import { useState } from 'react';
+import { StyleSheet, Screen } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import Reader from './src/Components/Reader/Reader';
+import NfcList from './src/Components/NfcList/NfcList';
+
+const Tab = createBottomTabNavigator();
+
 
 export default function App() {
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>NFC reader</Text>
-      <Button style={styles.button} title="Read" />
-      <Button style={styles.button} title="Write" />
+    <NavigationContainer>
+      <Tab.Navigator >
+        <Tab.Screen name="Reader" component={Reader} />
+        <Tab.Screen name="NFC List" component={NfcList} />
+      </Tab.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 
@@ -19,12 +26,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#e3ce9a'
+    backgroundColor: '#219ff2',
+    gap: 10,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  button: {
-  }
 });
+
