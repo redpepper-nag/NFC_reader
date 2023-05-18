@@ -4,15 +4,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 export default function NfcList() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Active NFCs</Text>
-      <View style={styles.buttonView}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Read</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Write</Text>
-        </TouchableOpacity>
-      </View>
+      <Text style={styles.title}>My tags</Text>
     </View>
   )
 };
@@ -30,22 +22,5 @@ title: {
   fontWeight: 'bold',
   marginBottom: 50,
 },
-buttonView: {
-  flexDirection: 'row',
-  gap: 50,
-},
-button: {
-  backgroundColor: 'blue',
-  paddingVertical: 15,
-  paddingHorizontal: 30,
-  borderRadius: 10,
-},
-buttonText: {
-  color: 'white',
-  fontSize: 16,
-  fontWeight: 'bold',
-},
 })
-
-
 

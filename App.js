@@ -14,12 +14,12 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator >
         <Tab.Screen name="Reader" component={Reader} />
-        <Tab.Screen name="NFC List" component={NfcList} />
+        <Tab.Screen name="Active Tags" component={NfcList} />
       </Tab.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
