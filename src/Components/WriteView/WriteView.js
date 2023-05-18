@@ -23,8 +23,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#219ff2',
-    gap: 10,
-  }
+    gap: 50,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    padding: 10,
+  },
   });
 
   export default WriteView
