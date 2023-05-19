@@ -7,27 +7,32 @@ import Reader from './src/Components/Reader/Reader';
 import NfcList from './src/Components/NfcList/NfcList';
 import WriteView from './src/Components/WriteView/WriteView';
 
+
+const activeTags = [
+  
+]
+
 const Tab = createBottomTabNavigator();
 
 
 export default function App() {
-  // return (
-
-  //   <NavigationContainer>
-  //     <Tab.Navigator >
-  //       <Tab.Screen name="Reader" component={Reader} />
-  //       <Tab.Screen name="Active Tags" component={NfcList} />
-  //     </Tab.Navigator>
-  //     <StatusBar style="auto" />
-  //   </NavigationContainer>
-  // );
-
   return (
-    <View style={styles.container}>
-    <WriteView />
-    <StatusBar style="auto" />
-  </View>
-  )
+
+    <NavigationContainer>
+      <Tab.Navigator >
+        <Tab.Screen name="Reader" component={Reader} />
+        <Tab.Screen name="Active Tags" component={NfcList} />
+      </Tab.Navigator>
+      <StatusBar style="auto" />
+    </NavigationContainer>
+  );
+
+  // return (
+  //   <View style={styles.container}>
+  //   <WriteView />
+  //   <StatusBar style="auto" />
+  // </View>
+  // )
   
  };
 
