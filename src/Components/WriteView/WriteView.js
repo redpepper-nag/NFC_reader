@@ -10,7 +10,7 @@ const WriteView = (props) => {
           placeholder="Type here" />
       </View>
       <View style={styles.input}>
-        <Text>Day:</Text>
+        <Text>Date:</Text>
         <TextInput style={styles.inputBox}
           placeholder="Type here" />
       </View>

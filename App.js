@@ -9,7 +9,21 @@ import WriteView from './src/Components/WriteView/WriteView';
 
 
 const activeTags = [
-  
+   {
+    level: "v4",
+    gym: "GP81",
+    date: "24/05"
+  },
+  {
+    level: "green",
+    gym: "VITAL",
+    date: "19/05"
+  },
+   {
+    level: "v2",
+    gym: "GP81",
+    date: "25/05"
+  },
 ]
 
 const Tab = createBottomTabNavigator();
@@ -34,6 +48,12 @@ export default function App() {
   // </View>
   // )
   
+    // return (
+    //   <View style={styles.container}>
+    //     <NfcList tags={activeTags}/>
+    //   </View>
+    // )
+
  };
 
 const styles = StyleSheet.create({
