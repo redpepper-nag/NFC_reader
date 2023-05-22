@@ -7,7 +7,7 @@ export default function NfcList(props) {
       <Text style={styles.title}>My tags</Text>
       {props.tags.map((tag) => {
         return (
-          <View style={styles.tag}>
+          <View style={styles.tag} key={props.tags.indexOf(tag)}>
             <Text>{tag.level}, {tag.gym}, {tag.date}</Text>
           </View>
         )
@@ -30,3 +30,5 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
 })
+
+

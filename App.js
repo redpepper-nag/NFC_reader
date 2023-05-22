@@ -7,6 +7,9 @@ import Reader from './src/Components/Reader/Reader';
 import NfcList from './src/Components/NfcList/NfcList';
 import WriteView from './src/Components/WriteView/WriteView';
 
+const NfcListScreen = () => {
+  return <NfcList tags={activeTags} />;
+};
 
 const activeTags = [
    {
@@ -35,7 +38,10 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator >
         <Tab.Screen name="Reader" component={Reader} />
-        <Tab.Screen name="Active Tags" component={NfcList} />
+        <Tab.Screen 
+        name="Active Tags" 
+        component={NfcListScreen} 
+        />
       </Tab.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
